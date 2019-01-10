@@ -1,0 +1,421 @@
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+E0106 11:03:34.493413 26843 extract_image_features.cpp:64] Using GPU #0
+I0106 11:03:34.496158 26843 net.cpp:76] Creating Layer data
+I0106 11:03:34.496181 26843 net.cpp:112] data -> data
+I0106 11:03:34.496193 26843 net.cpp:112] data -> label
+I0106 11:03:34.496217 26843 video_data_layer.cpp:283] Opening file prototxt/input_list_video.txt
+I0106 11:03:34.496379 26843 video_data_layer.cpp:317] A total of 109 video chunks.
+[mjpeg @ 0xafe5920] No JPEG data found in image
+I0106 11:03:34.641178 26843 video_data_layer.cpp:365] output data size: 50,3,16,112,112
+I0106 11:03:34.641237 26843 video_data_layer.cpp:387] Loading mean file from sport1m_train16_128_mean.binaryproto
+I0106 11:03:34.656431 26843 net.cpp:127] Top shape: 50 3 16 112 112 (30105600)
+I0106 11:03:34.656461 26843 net.cpp:127] Top shape: 50 1 1 1 1 (50)
+I0106 11:03:34.656468 26843 net.cpp:159] data does not need backward computation.
+I0106 11:03:34.656484 26843 net.cpp:76] Creating Layer conv1a
+I0106 11:03:34.656491 26843 net.cpp:86] conv1a <- data
+I0106 11:03:34.656504 26843 net.cpp:112] conv1a -> conv1a
+I0106 11:03:34.656949 26843 net.cpp:127] Top shape: 50 64 16 112 112 (642252800)
+I0106 11:03:34.656961 26843 net.cpp:154] conv1a needs backward computation.
+I0106 11:03:34.656973 26843 net.cpp:76] Creating Layer relu1a
+I0106 11:03:34.656982 26843 net.cpp:86] relu1a <- conv1a
+I0106 11:03:34.656991 26843 net.cpp:100] relu1a -> conv1a (in-place)
+I0106 11:03:34.656999 26843 net.cpp:127] Top shape: 50 64 16 112 112 (642252800)
+I0106 11:03:34.657006 26843 net.cpp:154] relu1a needs backward computation.
+I0106 11:03:34.657018 26843 net.cpp:76] Creating Layer pool1
+I0106 11:03:34.657025 26843 net.cpp:86] pool1 <- conv1a
+I0106 11:03:34.657033 26843 net.cpp:112] pool1 -> pool1
+I0106 11:03:34.657047 26843 net.cpp:127] Top shape: 50 64 16 56 56 (160563200)
+I0106 11:03:34.657055 26843 net.cpp:154] pool1 needs backward computation.
+I0106 11:03:34.657068 26843 net.cpp:76] Creating Layer conv2a
+I0106 11:03:34.657075 26843 net.cpp:86] conv2a <- pool1
+I0106 11:03:34.657083 26843 net.cpp:112] conv2a -> conv2a
+I0106 11:03:34.662956 26843 net.cpp:127] Top shape: 50 128 16 56 56 (321126400)
+I0106 11:03:34.662967 26843 net.cpp:154] conv2a needs backward computation.
+I0106 11:03:34.662974 26843 net.cpp:76] Creating Layer relu2a
+I0106 11:03:34.662983 26843 net.cpp:86] relu2a <- conv2a
+I0106 11:03:34.662993 26843 net.cpp:100] relu2a -> conv2a (in-place)
+I0106 11:03:34.663002 26843 net.cpp:127] Top shape: 50 128 16 56 56 (321126400)
+I0106 11:03:34.663008 26843 net.cpp:154] relu2a needs backward computation.
+I0106 11:03:34.663018 26843 net.cpp:76] Creating Layer pool2
+I0106 11:03:34.663027 26843 net.cpp:86] pool2 <- conv2a
+I0106 11:03:34.663031 26843 net.cpp:112] pool2 -> pool2
+I0106 11:03:34.663041 26843 net.cpp:127] Top shape: 50 128 8 28 28 (40140800)
+I0106 11:03:34.663048 26843 net.cpp:154] pool2 needs backward computation.
+I0106 11:03:34.663059 26843 net.cpp:76] Creating Layer conv3a
+I0106 11:03:34.663066 26843 net.cpp:86] conv3a <- pool2
+I0106 11:03:34.663074 26843 net.cpp:112] conv3a -> conv3a
+[mjpeg @ 0x7fb978003a80] No JPEG data found in image
+I0106 11:03:34.689267 26843 net.cpp:127] Top shape: 50 256 8 28 28 (80281600)
+I0106 11:03:34.689298 26843 net.cpp:154] conv3a needs backward computation.
+I0106 11:03:34.689316 26843 net.cpp:76] Creating Layer relu3a
+I0106 11:03:34.689324 26843 net.cpp:86] relu3a <- conv3a
+I0106 11:03:34.689332 26843 net.cpp:100] relu3a -> conv3a (in-place)
+I0106 11:03:34.689342 26843 net.cpp:127] Top shape: 50 256 8 28 28 (80281600)
+I0106 11:03:34.689348 26843 net.cpp:154] relu3a needs backward computation.
+I0106 11:03:34.689362 26843 net.cpp:76] Creating Layer conv3b
+I0106 11:03:34.689368 26843 net.cpp:86] conv3b <- conv3a
+I0106 11:03:34.689376 26843 net.cpp:112] conv3b -> conv3b
+I0106 11:03:34.738795 26843 net.cpp:127] Top shape: 50 256 8 28 28 (80281600)
+I0106 11:03:34.738821 26843 net.cpp:154] conv3b needs backward computation.
+I0106 11:03:34.738834 26843 net.cpp:76] Creating Layer relu3b
+I0106 11:03:34.738845 26843 net.cpp:86] relu3b <- conv3b
+I0106 11:03:34.738857 26843 net.cpp:100] relu3b -> conv3b (in-place)
+I0106 11:03:34.738867 26843 net.cpp:127] Top shape: 50 256 8 28 28 (80281600)
+I0106 11:03:34.738875 26843 net.cpp:154] relu3b needs backward computation.
+I0106 11:03:34.738888 26843 net.cpp:76] Creating Layer pool3
+I0106 11:03:34.738895 26843 net.cpp:86] pool3 <- conv3b
+I0106 11:03:34.738904 26843 net.cpp:112] pool3 -> pool3
+I0106 11:03:34.738919 26843 net.cpp:127] Top shape: 50 256 4 14 14 (10035200)
+I0106 11:03:34.738929 26843 net.cpp:154] pool3 needs backward computation.
+I0106 11:03:34.738940 26843 net.cpp:76] Creating Layer conv4a
+I0106 11:03:34.738950 26843 net.cpp:86] conv4a <- pool3
+I0106 11:03:34.738960 26843 net.cpp:112] conv4a -> conv4a
+[mjpeg @ 0x7fb9789d3da0] No JPEG data found in image
+[mjpeg @ 0x7fb97858c800] No JPEG data found in image
+I0106 11:03:34.841145 26843 net.cpp:127] Top shape: 50 512 4 14 14 (20070400)
+I0106 11:03:34.841182 26843 net.cpp:154] conv4a needs backward computation.
+I0106 11:03:34.841195 26843 net.cpp:76] Creating Layer relu4a
+I0106 11:03:34.841207 26843 net.cpp:86] relu4a <- conv4a
+I0106 11:03:34.841217 26843 net.cpp:100] relu4a -> conv4a (in-place)
+I0106 11:03:34.841225 26843 net.cpp:127] Top shape: 50 512 4 14 14 (20070400)
+I0106 11:03:34.841233 26843 net.cpp:154] relu4a needs backward computation.
+I0106 11:03:34.841244 26843 net.cpp:76] Creating Layer conv4b
+I0106 11:03:34.841251 26843 net.cpp:86] conv4b <- conv4a
+I0106 11:03:34.841259 26843 net.cpp:112] conv4b -> conv4b
+[mjpeg @ 0x7fb978709a20] No JPEG data found in image
+[mjpeg @ 0x7fb97839e9a0] No JPEG data found in image
+[mjpeg @ 0x7fb9787bf7c0] No JPEG data found in image
+I0106 11:03:35.044471 26843 net.cpp:127] Top shape: 50 512 4 14 14 (20070400)
+I0106 11:03:35.044507 26843 net.cpp:154] conv4b needs backward computation.
+I0106 11:03:35.044520 26843 net.cpp:76] Creating Layer relu4b
+I0106 11:03:35.044529 26843 net.cpp:86] relu4b <- conv4b
+I0106 11:03:35.044539 26843 net.cpp:100] relu4b -> conv4b (in-place)
+I0106 11:03:35.044549 26843 net.cpp:127] Top shape: 50 512 4 14 14 (20070400)
+I0106 11:03:35.044558 26843 net.cpp:154] relu4b needs backward computation.
+I0106 11:03:35.044569 26843 net.cpp:76] Creating Layer pool4
+I0106 11:03:35.044576 26843 net.cpp:86] pool4 <- conv4b
+I0106 11:03:35.044584 26843 net.cpp:112] pool4 -> pool4
+I0106 11:03:35.044593 26843 net.cpp:127] Top shape: 50 512 2 7 7 (2508800)
+I0106 11:03:35.044600 26843 net.cpp:154] pool4 needs backward computation.
+I0106 11:03:35.044610 26843 net.cpp:76] Creating Layer conv5a
+I0106 11:03:35.044618 26843 net.cpp:86] conv5a <- pool4
+I0106 11:03:35.044626 26843 net.cpp:112] conv5a -> conv5a
+[mjpeg @ 0x7fb9781bbc20] No JPEG data found in image
+[mjpeg @ 0x7fb978adbd40] No JPEG data found in image
+I0106 11:03:35.262128 26843 net.cpp:127] Top shape: 50 512 2 7 7 (2508800)
+I0106 11:03:35.262172 26843 net.cpp:154] conv5a needs backward computation.
+I0106 11:03:35.262187 26843 net.cpp:76] Creating Layer relu5a
+I0106 11:03:35.262198 26843 net.cpp:86] relu5a <- conv5a
+I0106 11:03:35.262208 26843 net.cpp:100] relu5a -> conv5a (in-place)
+I0106 11:03:35.262224 26843 net.cpp:127] Top shape: 50 512 2 7 7 (2508800)
+I0106 11:03:35.262233 26843 net.cpp:154] relu5a needs backward computation.
+I0106 11:03:35.262253 26843 net.cpp:76] Creating Layer conv5b
+I0106 11:03:35.262260 26843 net.cpp:86] conv5b <- conv5a
+I0106 11:03:35.262271 26843 net.cpp:112] conv5b -> conv5b
+[mjpeg @ 0x7fb978591780] No JPEG data found in image
+[mjpeg @ 0x7fb9786beb80] No JPEG data found in image
+I0106 11:03:35.464056 26843 net.cpp:127] Top shape: 50 512 2 7 7 (2508800)
+I0106 11:03:35.464092 26843 net.cpp:154] conv5b needs backward computation.
+I0106 11:03:35.464109 26843 net.cpp:76] Creating Layer relu5b
+I0106 11:03:35.464118 26843 net.cpp:86] relu5b <- conv5b
+I0106 11:03:35.464128 26843 net.cpp:100] relu5b -> conv5b (in-place)
+I0106 11:03:35.464136 26843 net.cpp:127] Top shape: 50 512 2 7 7 (2508800)
+I0106 11:03:35.464144 26843 net.cpp:154] relu5b needs backward computation.
+I0106 11:03:35.464154 26843 net.cpp:76] Creating Layer pool5
+I0106 11:03:35.464160 26843 net.cpp:86] pool5 <- conv5b
+I0106 11:03:35.464169 26843 net.cpp:112] pool5 -> pool5
+I0106 11:03:35.464179 26843 net.cpp:127] Top shape: 50 512 1 4 4 (409600)
+I0106 11:03:35.464185 26843 net.cpp:154] pool5 needs backward computation.
+I0106 11:03:35.464196 26843 net.cpp:76] Creating Layer fc6-1
+I0106 11:03:35.464203 26843 net.cpp:86] fc6-1 <- pool5
+I0106 11:03:35.464211 26843 net.cpp:112] fc6-1 -> fc6-1
+[mjpeg @ 0x7fb9784d9180] No JPEG data found in image
+[mjpeg @ 0x7fb9787a9400] No JPEG data found in image
+[mjpeg @ 0x7fb978545a00] No JPEG data found in image
+[mjpeg @ 0x7fb9787bea00] No JPEG data found in image
+[mjpeg @ 0x7fb978173c80] No JPEG data found in image
+[mjpeg @ 0x7fb978adc5c0] No JPEG data found in image
+[mjpeg @ 0x7fb978590d40] No JPEG data found in image
+[mjpeg @ 0x7fb9786773e0] No JPEG data found in image
+[mjpeg @ 0x7fb978491800] No JPEG data found in image
+I0106 11:03:36.448226 26843 net.cpp:127] Top shape: 50 4096 1 1 1 (204800)
+I0106 11:03:36.448271 26843 net.cpp:154] fc6-1 needs backward computation.
+I0106 11:03:36.448288 26843 net.cpp:76] Creating Layer relu6
+I0106 11:03:36.448297 26843 net.cpp:86] relu6 <- fc6-1
+I0106 11:03:36.448304 26843 net.cpp:100] relu6 -> fc6-1 (in-place)
+I0106 11:03:36.448312 26843 net.cpp:127] Top shape: 50 4096 1 1 1 (204800)
+I0106 11:03:36.448323 26843 net.cpp:154] relu6 needs backward computation.
+I0106 11:03:36.448329 26843 net.cpp:76] Creating Layer drop6
+I0106 11:03:36.448341 26843 net.cpp:86] drop6 <- fc6-1
+I0106 11:03:36.448348 26843 net.cpp:100] drop6 -> fc6-1 (in-place)
+I0106 11:03:36.448354 26843 net.cpp:127] Top shape: 50 4096 1 1 1 (204800)
+I0106 11:03:36.448361 26843 net.cpp:154] drop6 needs backward computation.
+I0106 11:03:36.448369 26843 net.cpp:76] Creating Layer fc7-1
+I0106 11:03:36.448375 26843 net.cpp:86] fc7-1 <- fc6-1
+I0106 11:03:36.448384 26843 net.cpp:112] fc7-1 -> fc7-1
+[mjpeg @ 0x7fb978805b60] No JPEG data found in image
+[mjpeg @ 0x7fb978172340] No JPEG data found in image
+[mjpeg @ 0x7fb978adccc0] No JPEG data found in image
+[mjpeg @ 0x7fb9785d98a0] No JPEG data found in image
+[mjpeg @ 0x7fb978705920] No JPEG data found in image
+[mjpeg @ 0x7fb978364e20] No JPEG data found in image
+I0106 11:03:36.929023 26843 net.cpp:127] Top shape: 50 4096 1 1 1 (204800)
+I0106 11:03:36.929059 26843 net.cpp:154] fc7-1 needs backward computation.
+I0106 11:03:36.929072 26843 net.cpp:76] Creating Layer relu7
+I0106 11:03:36.929080 26843 net.cpp:86] relu7 <- fc7-1
+I0106 11:03:36.929090 26843 net.cpp:100] relu7 -> fc7-1 (in-place)
+I0106 11:03:36.929100 26843 net.cpp:127] Top shape: 50 4096 1 1 1 (204800)
+I0106 11:03:36.929107 26843 net.cpp:154] relu7 needs backward computation.
+I0106 11:03:36.929116 26843 net.cpp:76] Creating Layer drop7
+I0106 11:03:36.929124 26843 net.cpp:86] drop7 <- fc7-1
+I0106 11:03:36.929131 26843 net.cpp:100] drop7 -> fc7-1 (in-place)
+I0106 11:03:36.929139 26843 net.cpp:127] Top shape: 50 4096 1 1 1 (204800)
+I0106 11:03:36.929147 26843 net.cpp:154] drop7 needs backward computation.
+I0106 11:03:36.929158 26843 net.cpp:76] Creating Layer fc8-1
+I0106 11:03:36.929165 26843 net.cpp:86] fc8-1 <- fc7-1
+I0106 11:03:36.929173 26843 net.cpp:112] fc8-1 -> fc8-1
+[mjpeg @ 0x7fb9787bf880] No JPEG data found in image
+I0106 11:03:36.985899 26843 net.cpp:127] Top shape: 50 487 1 1 1 (24350)
+I0106 11:03:36.985929 26843 net.cpp:154] fc8-1 needs backward computation.
+I0106 11:03:36.985940 26843 net.cpp:76] Creating Layer prob
+I0106 11:03:36.985947 26843 net.cpp:86] prob <- fc8-1
+I0106 11:03:36.985956 26843 net.cpp:112] prob -> prob
+I0106 11:03:36.985970 26843 net.cpp:127] Top shape: 50 487 1 1 1 (24350)
+I0106 11:03:36.985976 26843 net.cpp:154] prob needs backward computation.
+I0106 11:03:36.985985 26843 net.cpp:76] Creating Layer accuracy
+I0106 11:03:36.985994 26843 net.cpp:86] accuracy <- prob
+I0106 11:03:36.986001 26843 net.cpp:86] accuracy <- label
+I0106 11:03:36.986009 26843 net.cpp:112] accuracy -> accuracy
+I0106 11:03:36.986021 26843 net.cpp:127] Top shape: 1 2 1 1 1 (2)
+I0106 11:03:36.986028 26843 net.cpp:154] accuracy needs backward computation.
+I0106 11:03:36.986037 26843 net.cpp:165] This network produces output accuracy
+I0106 11:03:36.986063 26843 net.cpp:183] Collecting Learning Rate and Weight Decay.
+I0106 11:03:36.986083 26843 net.cpp:176] Network initialization done.
+I0106 11:03:36.986088 26843 net.cpp:177] Memory required for Data 5653289408
+[mjpeg @ 0x7fb978174dc0] No JPEG data found in image
+[mjpeg @ 0x7fb978adc6c0] No JPEG data found in image
+[mjpeg @ 0x7fb978592060] No JPEG data found in image
+[mjpeg @ 0x7fb9783656e0] No JPEG data found in image
+[mjpeg @ 0x7fb9788062c0] No JPEG data found in image
+E0106 11:03:37.680430 26843 extract_image_features.cpp:81] Extracting features for 35 batches
+[mjpeg @ 0x7fb97862e7c0] No JPEG data found in image
+[mjpeg @ 0x7fb978401480] No JPEG data found in image
+[mjpeg @ 0x7fb9787a92a0] No JPEG data found in image
+[mjpeg @ 0x7fb978593e80] No JPEG data found in image
+[mjpeg @ 0x7fb9787bf380] No JPEG data found in image
+[mjpeg @ 0x7fb9781bb7a0] No JPEG data found in image
+[mjpeg @ 0x7fb978b249c0] No JPEG data found in image
+[mjpeg @ 0x7fb978592780] No JPEG data found in image
+[mjpeg @ 0x7fb9786bef00] No JPEG data found in image
+[mjpeg @ 0x7fb9784d93c0] No JPEG data found in image
+[mjpeg @ 0x7fb9787bef60] No JPEG data found in image
+[mjpeg @ 0x7fb978173b20] No JPEG data found in image
+[mjpeg @ 0x7fb978adc5a0] No JPEG data found in image
+[mjpeg @ 0x7fb9785919c0] No JPEG data found in image
+[mjpeg @ 0x7fb9786be700] No JPEG data found in image
+[mjpeg @ 0x7fb9784912a0] No JPEG data found in image
+[mjpeg @ 0x7fb9787a5680] No JPEG data found in image
+[mjpeg @ 0x7fb978590de0] No JPEG data found in image
+[mjpeg @ 0x7fb9787c7400] No JPEG data found in image
+[mjpeg @ 0x7fb9781b1840] No JPEG data found in image
+[mjpeg @ 0x7fb9781b1000] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b1020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+E0106 11:03:40.786845 26843 extract_image_features.cpp:117] Extracted features of 50 images.
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0700] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb978021b40] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b1020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0700] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb9781b0020] No JPEG data found in image
+[mjpeg @ 0x7fb978021080] No JPEG data found in image
+[mjpeg @ 0x7fb97801de60] No JPEG data found in image
+[mjpeg @ 0x7fb9786aec80] No JPEG data found in image
+[mjpeg @ 0x7fb978ea13c0] No JPEG data found in image
+[mjpeg @ 0x7fb97860c800] No JPEG data found in image
+[mjpeg @ 0x7fb9789cac20] No JPEG data found in image
+[mjpeg @ 0x7fb97885aae0] No JPEG data found in image
+[mjpeg @ 0x7fb9782c8300] No JPEG data found in image
+[mjpeg @ 0x7fb97855aa80] No JPEG data found in image
+[mjpeg @ 0x7fb9785f8b40] No JPEG data found in image
+[mjpeg @ 0x7fb978843840] No JPEG data found in image
+[mjpeg @ 0x7fb9782f94e0] No JPEG data found in image
+[mjpeg @ 0x7fb978585580] No JPEG data found in image
+[mjpeg @ 0x7fb978012e80] No JPEG data found in image
+[mjpeg @ 0x7fb978888d80] No JPEG data found in image
+[mjpeg @ 0x7fb9782f6ca0] No JPEG data found in image
+[mjpeg @ 0x7fb9784b1060] No JPEG data found in image
+[mjpeg @ 0x7fb978743920] No JPEG data found in image
+[mjpeg @ 0x7fb978007ba0] No JPEG data found in image
+[mjpeg @ 0x7fb97892caa0] No JPEG data found in image
+[mjpeg @ 0x7fb9783e2660] No JPEG data found in image
+[mjpeg @ 0x7fb9786bb800] No JPEG data found in image
+[mjpeg @ 0x7fb978a8f220] No JPEG data found in image
+[mjpeg @ 0x7fb9783b8880] No JPEG data found in image
+[mjpeg @ 0x7fb9785ae200] No JPEG data found in image
+[mjpeg @ 0x7fb9783f3a80] No JPEG data found in image
+[mjpeg @ 0x7fb978008060] No JPEG data found in image
+[mjpeg @ 0x7fb9783f5220] No JPEG data found in image
+[mjpeg @ 0x7fb9785a7480] No JPEG data found in image
+[mjpeg @ 0x7fb9783f9d00] No JPEG data found in image
+[mjpeg @ 0x7fb978012e80] No JPEG data found in image
+[mjpeg @ 0x7fb9783f8bc0] No JPEG data found in image
+[mjpeg @ 0x7fb9785eee60] No JPEG data found in image
+[mjpeg @ 0x7fb9783fa5a0] No JPEG data found in image
+[mjpeg @ 0x7fb978008420] No JPEG data found in image
+[mjpeg @ 0x7fb9783f3d60] No JPEG data found in image
+[mjpeg @ 0x7fb9785b18c0] No JPEG data found in image
+[mjpeg @ 0x7fb9783f9740] No JPEG data found in image
+[mjpeg @ 0x7fb9785f8620] No JPEG data found in image
+[mjpeg @ 0x7fb978441100] No JPEG data found in image
+[mjpeg @ 0x7fb9785b12c0] No JPEG data found in image
+[mjpeg @ 0x7fb9783f9a20] No JPEG data found in image
+[mjpeg @ 0x7fb978012cc0] No JPEG data found in image
+[mjpeg @ 0x7fb9783f9040] No JPEG data found in image
+[mjpeg @ 0x7fb978aa2420] No JPEG data found in image
+[mjpeg @ 0x7fb97843e9a0] No JPEG data found in image
+[mjpeg @ 0x7fb9785b1080] No JPEG data found in image
+[mjpeg @ 0x7fb9783f9180] No JPEG data found in image
+[mjpeg @ 0x7fb978aa2800] No JPEG data found in image
+[mjpeg @ 0x7fb9783f8040] No JPEG data found in image
+[mjpeg @ 0x7fb9785ee460] No JPEG data found in image
+[mjpeg @ 0x7fb9785ee140] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb97806d4a0] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785ca4e0] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785ca4e0] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785ee0c0] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c9c60] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9781b1de0] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb978da8760] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9785ca4e0] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb9781b1de0] No JPEG data found in image
+[mjpeg @ 0x7fb9785ee1c0] No JPEG data found in image
+[mjpeg @ 0x7fb9785ca4e0] No JPEG data found in image
+[mjpeg @ 0x7fb9785c2d40] No JPEG data found in image
+[mjpeg @ 0x7fb97847e460] No JPEG data found in image
+[mjpeg @ 0x7fb97847e140] No JPEG data found in image
+[mjpeg @ 0x7fb9788a4d80] No JPEG data found in image
+[mjpeg @ 0x7fb97861e940] No JPEG data found in image
+[mjpeg @ 0x7fb978a95ba0] No JPEG data found in image
+[mjpeg @ 0x7fb978592ca0] No JPEG data found in image
+[mjpeg @ 0x7fb9786e8ba0] No JPEG data found in image
+[mjpeg @ 0x7fb9782d0020] No JPEG data found in image
+E0106 11:03:57.547011 26843 extract_image_features.cpp:121] Successfully extracted 109 features!
+[mjpeg @ 0x7fb9787a2160] No JPEG data found in image
+[mjpeg @ 0x7fb978350360] No JPEG data found in image
+[mjpeg @ 0x7fb9788dbd60] No JPEG data found in image
+[mjpeg @ 0x7fb978799f80] No JPEG data found in image
+[mjpeg @ 0x7fb9783111c0] No JPEG data found in image
+[mjpeg @ 0x7fb978923ba0] No JPEG data found in image
+[mjpeg @ 0x7fb978799ac0] No JPEG data found in image
+[mjpeg @ 0x7fb978358c20] No JPEG data found in image
+[mjpeg @ 0x7fb9788dbcc0] No JPEG data found in image
+[mjpeg @ 0x7fb978799ec0] No JPEG data found in image
+[mjpeg @ 0x7fb978310ee0] No JPEG data found in image
+[mjpeg @ 0x7fb9788dcbc0] No JPEG data found in image
+[mjpeg @ 0x7fb9787e1ba0] No JPEG data found in image
+[mjpeg @ 0x7fb97830f7e0] No JPEG data found in image
+[mjpeg @ 0x7fb978923540] No JPEG data found in image
+[mjpeg @ 0x7fb97847e2e0] No JPEG data found in image
+[mjpeg @ 0x7fb978b24740] No JPEG data found in image
+[mjpeg @ 0x7fb978591da0] No JPEG data found in image
+[mjpeg @ 0x7fb9786e8aa0] No JPEG data found in image
+[mjpeg @ 0x7fb9782d0540] No JPEG data found in image
+[mjpeg @ 0x7fb9787a1ba0] No JPEG data found in image
+[mjpeg @ 0x7fb978308b40] No JPEG data found in image
+[mjpeg @ 0x7fb978923ce0] No JPEG data found in image
+[mjpeg @ 0x7fb97847cb40] No JPEG data found in image
+[mjpeg @ 0x7fb978ad7ea0] No JPEG data found in image
+[mjpeg @ 0x7fb97858d9e0] No JPEG data found in image
+[mjpeg @ 0x7fb9786d16c0] No JPEG data found in image
+[mjpeg @ 0x7fb9782ca280] No JPEG data found in image
+[mjpeg @ 0x7fb9787a1d80] No JPEG data found in image
+[mjpeg @ 0x7fb978350740] No JPEG data found in image
+[mjpeg @ 0x7fb9789239c0] No JPEG data found in image
+[mjpeg @ 0x7fb978799ac0] No JPEG data found in image
+[mjpeg @ 0x7fb9783111c0] No JPEG data found in image
+[mjpeg @ 0x7fb9788dc4c0] No JPEG data found in image
+[mjpeg @ 0x7fb978799cc0] No JPEG data found in image
+[mjpeg @ 0x7fb978357e20] No JPEG data found in image
+[mjpeg @ 0x7fb9788db420] No JPEG data found in image
+[mjpeg @ 0x7fb978799e60] No JPEG data found in image
+[mjpeg @ 0x7fb978311400] No JPEG data found in image
+[mjpeg @ 0x7fb9788dd180] No JPEG data found in image
+[mjpeg @ 0x7fb97847cb40] No JPEG data found in image
+[mjpeg @ 0x7fb978ad7ac0] No JPEG data found in image
